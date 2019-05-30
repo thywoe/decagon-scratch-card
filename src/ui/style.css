@@ -21,7 +21,7 @@ body{
     border: 2px solid red;
     }
     
-    .top-buttons {
+.top-buttons {
       position: relative;
       display: block;
       width: 100%;
@@ -85,14 +85,14 @@ body{
     }
     
     .form form 
-    lable,
+    label,
     input[type="text"],
     input[type="email"],
     input[type="password"] {
       display: block;
     }
     
-    .form form lable {
+    .form form label {
       color: #fff;
       font-size: 16px;
       font-weight: 300;
@@ -142,11 +142,11 @@ body{
       box-shadow: none
     }
     
-    .form-signup{
+    .form-signin{
       display: none;
     }
     
-    .form-signin
+    .form-signup
     {
       padding-top: 120px
     }
