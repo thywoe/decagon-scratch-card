@@ -1,0 +1,19 @@
+{
+    "user": [
+      {
+        "id": 1,
+        "username": "lanre",
+        "email": "ade@gmail.com",
+        "password": "adekunlegold"
+      }
+    ],
+    "scratch-card": [
+      {
+        "card_number": "7683424448804214",
+        "serial_number": "107958252587731200542",
+        "amount": "500",
+        "validity": "2019-03-15T08:44:29.743Z",
+        "id": 1
+      }
+    ]
+  }
