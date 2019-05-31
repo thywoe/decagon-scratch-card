@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {font-family: "Lato", sans-serif;
+        margin:0;
+        padding:0;
+        background-color: aliceblue;
+
+}
+
+.header{
+    background-color: #374a62;
+    color: yellow;
+    margin-top:0;
+    padding: 5px;
+    text-align: center;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: linear-gradient(to right, #232f41, #374a62);
+  overflow-x: hidden;
+  padding-top: 16px;
+  transition: background-color 3s ease-in;
+  border-right: 1px solid #374a62;
+}
+.sidebar:hover {
+    background-color: #374a62;
+}
+
+.sidebar a {
+  margin-top: 80px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #0c0b0b;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+  border-left: 5px solid springgreen;
+  background-color: #0c0b0b;
+}
+
+.main {
+  margin-left: 200px; 
+  padding: 0px 10px;
+  /* height: 100%; */
+  background-color: aliceblue;
+}
+
+.home {
+    text-align: center;
+    color: purple;
+}
+
+.card {
+    display: none;
+    text-align: center;
+}
+.card select, .card-btn{
+    width:40%;
+    padding:20px;
+    font-size: 20px;
+    margin-top: 20px;
+    outline: none;
+    font-weight: bold;
+    
+}
+.card-btn {
+    background-color: #F9F9F9 ;
+    border-radius: 20px;
+    color: #0CCAD4; 
+}
+
+.amount {
+  border-radius: 20px;
+}
+
+
+.display {
+    text-align: center;
+    margin:auto;
+    margin-top: 140px;
+}
+
+.data {
+  width:100%;
+  margin-bottom: 20px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.data thead {
+  background-color: #0CCAD4;
+  color: snow;
+}
+
+.display table, th, td {  border: 1px solid #ddd;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align:center;    
+}
+
+.read, .readCard, .editcard, .deleteCard {
+  border-radius: 5px;
+  background-color: aqua;
+  padding: 5px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
