@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>MTN RECHARGE CARD</title>
+            <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,400,700' rel="stylesheet">
+            <link rel="stylesheet" href="card.css">
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+            <link rel="stylesheet"
+             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+              crossorigin="anonymous">
+    </head>
+    <body>
+        <header class='header'>
+            <h1>SCRATCH CARD PLATFORM</h1>
+        </header>
+        <div class="sidebar">
+                <a href="#home" id='landing'><i class="fa fa-fw fa-home"></i> Home</a>
+                <a href="#generate" id='generate'><i class="fas fa-money-check"></i> Generate-Card</a>
+                <a href="#payment"><i class="fa fa-fw fa-user"></i> Payment</a>
+                <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        </div>
+
+        <div class='main'>
+            <div class='home'>
+                <h2>Welcome to our Platform</h2>
+            </div>
+            <div class='card'>
+                <select class='amount'>
+                    <option selected disabled>Select Amount</option>
+                    <option name='100'>100</option>
+                    <option name='200'>200</option>
+                    <option name='500'>500</option>
+                    <option name='1000'>1000</option>
+                </select>
+                <button class='card-btn'>Generate card</button>
+                <div class='display'>
+                <table class='data'>
+                    <thead>
+                        <tr>
+                           <th>Number</th>
+                           <th>Serial-Number</th>
+                           <th>Amount</th>
+                           <th>Validity</th>
+                           <th colspan="3"><button type="submit" class="read">ReadAll</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                </div>
+            </div>       
+        </div>
+
+    <script src='card.js'></script>
+    </body>
+</html>
