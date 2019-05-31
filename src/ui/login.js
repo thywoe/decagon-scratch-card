@@ -46,6 +46,36 @@ $(document).ready(function() {
           });
         }
         e.preventDefault();
-      }); 
+      });
+
+// Login
+
+    $("#sign-in").submit(e => {
+        e.preventDefault();
+      
+        let email = $('input[name=email1]').val();
+        let password = $('input[name=password1]').val();
+      
+        $.ajax({
+          method: "GET",
+          url: "http://localhost:3000/user",
+          dataType: "json"
+        }).done(function(data) {
+          let user = data.find(
+            user => user.email === email && user.password === password);
+          if (user) {
+            alert("Welcome back!" + user.username);
+            // window.location.href = "freelancers.html";
+          } else {
+            alert("You have to Sign-up")
+          }
+        });
+      });
+      
+      
+      
+
+
+
   });
 
