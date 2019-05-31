@@ -22,4 +22,22 @@ $(document).ready(function(){
      );
  }
 
+ function getCard(id){
+    console.log("id",id);
+    $.ajax(
+      {
+         type:'GET',
+         url: 'http://localhost:3000/scratch-card/'+id,
+         success:function(data){
+           $('tbody').empty();
+           $('tbody').append("<tr>"+ "<td>"+ data.card_number+ "</td>" + "<td>"+ data.serial_number + "</td>" + "<td>"+ data.amount + "</td>"+ "<td>"+ data.validity + "</td>" + "</tr>");
+           console.log("Deleted succesfully");
+         },
+         error:function(){
+            console.log("error");
+         }
+      }
+    );
+}
+
 })
