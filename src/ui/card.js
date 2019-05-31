@@ -96,4 +96,26 @@ function deleteCard(id){
     );
 }
 
+// PUT Request
+function editCard()
+{
+   var data = new Object();
+  
+   $.ajax(
+     {
+        type:'PUT',
+        url: 'http://localhost:3000/scratch-card/'+data.id,
+        data: JSON.stringify(data),
+        contentType:'application/json',
+        success:function(data){
+          getAllCard();
+          console.log("Updated succesfully");
+        },
+        error:function(){
+           console.log("error");
+        }
+     }
+   );
+}
+
 })
