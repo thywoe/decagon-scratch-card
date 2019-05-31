@@ -74,7 +74,7 @@ body{
     .form form {
       width: 100%;
       height: 100%;
-      float: right;
+      /* float: right; */
     }
     
     .form form 
@@ -107,15 +107,14 @@ body{
       padding: 5px 0 10px 0;
       background: transparent;
       border-bottom: 1px solid #4c5c72;
+      text-decoration: none;
     }
     
     .form form input::placeholder{
       color: #cecece;
     }
     
-    .form form a {
-      color: #fff;
-    }
+    
     
     input.form-btn {
       color: #fff;

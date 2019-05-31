@@ -18,11 +18,34 @@ $(document).ready(function() {
       $(".form-signup").slideUp(500);
     });
     
-    $(".form-signin").submit(function() {
-      $(".to-signin")
-        .addClass("top-active-button")
-        .siblings()
-        .removeClass("top-active-button")
-    });
-    
+// sign-up
+    $("#sign-up").submit(e => {
+
+       let username = $('input[name=username]').val();
+       let email = $('input[name=email]').val();
+       let password = $('input[name=password]').val()
+
+       let formData = JSON.stringify({username, email, password})
+      
+  
+    if (username == '' || email == '' || password == '') {
+        alert("Please fill all fields...!!!!!!");
+    } else if (password.length < 8) {
+        alert("Password should atleast 8 character in length...!!!!!!");
+    }else {
+          $.ajax({
+            method: "POST",
+            url: "http://localhost:3000/user",
+            dataType: "json",
+            contentType: "application/json",
+            data: formData,
+            encode: true
+          }).done(function(data) {
+            // window.location.href = ".html";
+            alert('Sign-in successful!!!!!!')
+          });
+        }
+        e.preventDefault();
+      }); 
   });
+
