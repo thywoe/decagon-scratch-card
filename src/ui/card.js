@@ -1,4 +1,30 @@
 $(document).ready(function(){
+    $('#generate').click(function(){
+        $('.card').show().siblings().hide();
+    });
+
+    $('#landing').click(function(){
+        $('.home').show().siblings().hide();
+    });
+
+    $('.card-btn').click(addCard)
+
+    $(".read").click(getAllCard);
+
+    $("tbody").on("click",".deleteCard",null,function(){
+        var id = $(this).attr("id");
+         deleteCard(id);
+      });
+      $("tbody").on("click",".editCard",null,function(){
+        var id = $(this).attr("id");
+         editCard(id);
+      });
+
+      $("tbody").on("click",".readCard",null,function(){
+        var id = $(this).attr("id");
+         getCard(id);
+      });
+
 
      // GET Request
  function getAllCard()
@@ -116,6 +142,5 @@ function editCard()
         }
      }
    );
-}
-
+ }
 })
