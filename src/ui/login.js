@@ -41,7 +41,7 @@ $(document).ready(function() {
             data: formData,
             encode: true
           }).done(function(data) {
-            // window.location.href = ".html";
+            window.location.href = "card.html";
             alert('Sign-in successful!!!!!!')
           });
         }
@@ -65,7 +65,7 @@ $(document).ready(function() {
             user => user.email === email && user.password === password);
           if (user) {
             alert("Welcome back!" + user.username);
-            // window.location.href = "freelancers.html";
+            window.location.href = "card.html";
           } else {
             alert("You have to Sign-up")
           }
