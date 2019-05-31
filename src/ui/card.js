@@ -78,4 +78,22 @@ function addCard()
      );
  }
 
+ // Delete Request
+function deleteCard(id){
+    console.log("id",id);
+    $.ajax(
+      {
+         type:'DELETE',
+         url: 'http://localhost:3000/scratch-card/'+id,
+         success:function(data){
+           getAllCard();
+           console.log("Deleted succesfully");
+         },
+         error:function(){
+            console.log("error");
+         }
+      }
+    );
+}
+
 })
