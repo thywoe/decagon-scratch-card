@@ -40,4 +40,42 @@ $(document).ready(function(){
     );
 }
 
+function addCard()
+ {   //generate card numbers 16 digits
+     let numbers = [1,2,3,4,5,6,7,8,9,1,3,6,2,5,7];
+    let randNum = '';
+    for(let i = 0;i <= numbers.length;i++){
+        randNum += Math.floor(Math.random() * 10);
+    }
+
+    //generate serial numbers 20 digits
+     let serial = [...numbers,1,2,4,6,7];
+     let serialNum = '';
+     for(let i = 0;i <= serial.length;i++){
+        serialNum += Math.floor(Math.random() * 10);
+    }
+
+     var data = new Object();
+     data.card_number = randNum;
+     data.serial_number = serialNum;
+     data.amount = $("select.amount").children("option:selected").val();;
+     data.validity = new Date(+(new Date()) - Math.floor(Math.random()*10000000000));
+
+     $.ajax(
+       {
+          type:'POST',
+          url: 'http://localhost:3000/scratch-card',
+          data: JSON.stringify(data),
+          contentType:'application/json',
+          success:function(data){
+            getCard(data.id);
+            console.log("added succesfully");
+          },
+          error:function(){
+             console.log("error");
+          }
+       }
+     );
+ }
+
 })
